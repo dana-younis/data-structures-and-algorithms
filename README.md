@@ -13,3 +13,12 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 ### 401 Data Structures, Code Challenges
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+
+
+# 401 Data Structures, Code Challenges
+
+| assignment     | link                                                               | 
+| --------       | ----------                                                         | 
+| class-01       | [Reverse an array](https://github.com/dana-younis/data-structures-and-algorithms/blob/master/code-challenges/arrayReverse/README.md)                                        |
+

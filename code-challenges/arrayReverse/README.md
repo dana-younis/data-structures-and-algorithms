@@ -12,3 +12,5 @@ achieving this without using built in functions
 
 * Solution
 
+![solution](../image/wite.png)
+
