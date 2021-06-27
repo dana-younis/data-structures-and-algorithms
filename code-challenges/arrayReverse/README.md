@@ -12,5 +12,5 @@ achieving this without using built in functions
 
 * Solution
 
-![solution](../image/wite.png)
+![solution](https://github.com/dana-younis/data-structures-and-algorithms/blob/master/image/wite.png)
 
