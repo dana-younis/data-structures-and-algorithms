@@ -9,4 +9,4 @@ insert a value in the middle of an array
 3- Divide the issue into several smaller issues
 
 ## Solution
-![whiteboard](../image/array-shift.png)
+![whiteboard](../image/2.png)
