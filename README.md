@@ -22,4 +22,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | --------       | ----------                                                         | 
 | class-01       | [Reverse an array](https://github.com/dana-younis/data-structures-and-algorithms/blob/master/code-challenges/arrayReverse/README.md)                                        |
 | class-02        | [Shift an array](https://github.com/dana-younis/data-structures-and-algorithms/blob/master/code-challenges/arrayReverse/README.md)                                               |
-| class-03        | [array-binary-search.](https://github.com/dana-younis/data-structures-and-algorithms/blob/master/code-challenges/arrayReverse/README.md)                                        |
+| class-03        | [array-binary-search.](https://github.com/dana-younis/data-structures-and-algorithms/blob/master/code-challenges/arrayBinarySearch/README.md)                                        |
