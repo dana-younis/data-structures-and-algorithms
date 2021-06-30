@@ -13,4 +13,4 @@ Create a while loop that matches the middle point of the array value, and if the
 
 
 ## Solution
-![whiteboard](../image/3)
+![whiteboard](../image/3.png)
