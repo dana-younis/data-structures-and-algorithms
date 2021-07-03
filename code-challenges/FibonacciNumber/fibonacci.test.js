@@ -2,7 +2,7 @@
 
 const fibIterative = require("./fib.js");
 
-describe("TESTING Fib iterative function", () => {
+describe("TESTING Fib ", () => {
   it('SUCCESSES "HAPPY PATH"', () => {
     expect(fibIterative(3)).toEqual(6);
     expect(fibIterative(-1)).toEqual(-2);
