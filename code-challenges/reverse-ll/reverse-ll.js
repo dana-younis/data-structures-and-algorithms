@@ -1,8 +1,7 @@
-'use strict';
+// 'use strict';
 
 // Require the linked list implementation
-const LinkedList = require('../../code-challenges/linked-list/index');
-
+const LinkedList = require("../../code-challenges/linked-list/index");
 
 /*
   Accept a linked list
@@ -10,7 +9,5 @@ const LinkedList = require('../../code-challenges/linked-list/index');
   Return it
 */
 module.exports = function reverse(list) {
-
   return true;
-
 };
