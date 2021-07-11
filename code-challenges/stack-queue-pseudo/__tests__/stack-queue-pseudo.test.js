@@ -2,8 +2,8 @@
 
 const stackQueuePseudo = require('../stackQueuePseudo');
 
-describe('tests for the functionality of stackQueuePseudoueue Function', () => {
-  test('Can successfully push onto a stack', () => {
+describe('tests stackQueuePseudoueue Function', () => {
+  test(' push onto a stack', () => {
     let stack = new stackQueuePseudo.stack();
 
     let nodeB = new stackQueuePseudo.node('number two');
@@ -13,25 +13,25 @@ describe('tests for the functionality of stackQueuePseudoueue Function', () => {
     expect(stack.pop()).toEqual({ next: null, value: 'number two' });
   });
 
-  test('Can successfully push multiple values onto a stack', () => {
+  test(' push multiple values onto a stack', () => {
     let stack = new stackQueuePseudo.stack();
-    let nodeA = new stackQueuePseudo.node('numero uno');
-    let nodeB = new stackQueuePseudo.node('numero dos');
-    let nodeC = new stackQueuePseudo.node('numero tres');
+    let nodeA = new stackQueuePseudo.node('number one');
+    let nodeB = new stackQueuePseudo.node('number two');
+    let nodeC = new stackQueuePseudo.node('number three');
 
     stack.push(nodeA);
     stack.push(nodeB);
     stack.push(nodeC);
 
-    expect(stack.top.value).toEqual({ next: null, value: 'numero tres' });
-    expect(stack.top.next.value).toEqual({ next: null, value: 'numero dos' });
+    expect(stack.top.value).toEqual({ next: null, value: 'number three' });
+    expect(stack.top.next.value).toEqual({ next: null, value: 'number two' });
   });
 
   test('Can successfully pop off the stack', () => {
     let stack = new stackQueuePseudo.stack();
-    let nodeA = new stackQueuePseudo.node('adeen');
-    let nodeB = new stackQueuePseudo.node('dva');
-    let nodeC = new stackQueuePseudo.node('tree');
+    let nodeA = new stackQueuePseudo.node('one');
+    let nodeB = new stackQueuePseudo.node('two');
+    let nodeC = new stackQueuePseudo.node('three');
 
     stack.push(nodeA);
     stack.push(nodeB);
@@ -39,10 +39,10 @@ describe('tests for the functionality of stackQueuePseudoueue Function', () => {
 
     let test = stack.pop();
 
-    expect(test).toEqual({ next: null, value: 'tree' });
+    expect(test).toEqual({ next: null, value: 'three' });
   });
 
-  test('Can successfully empty a stack after multiple pops', () => {
+  test(' empty a stack after multiple pops', () => {
     let stack = new stackQueuePseudo.stack();
     let nodeA = new stackQueuePseudo.node('1');
     let nodeB = new stackQueuePseudo.node('2');
@@ -57,7 +57,7 @@ describe('tests for the functionality of stackQueuePseudoueue Function', () => {
     expect(test).toEqual({ next: null, value: '3' });
   });
 
-  test('Can successfully peek the next item on the stack', () => {
+  test('peek the next item on the stack', () => {
     let stack = new stackQueuePseudo.stack();
     let nodeA = new stackQueuePseudo.node('first');
     let nodeB = new stackQueuePseudo.node('second');
@@ -72,15 +72,15 @@ describe('tests for the functionality of stackQueuePseudoueue Function', () => {
     expect(test).toEqual({ next: null, value: 'third' });
   });
 
-  test('Can successfully instantiate an empty stack', () => {
+  test('instantiate an empty stack', () => {
     let stack = new stackQueuePseudo.stack();
 
     expect(stack.top).toEqual(null);
   });
 
   test('Calling pop or peek on empty stack raises exception', () => {
-    // let stack = new stackQueuePseudo.stack();
-    // let test = stack.peek();
+    // let stack = new stackQueuePseudo.stack().peek();
+  
 
     expect('no node in the stack!').toEqual('no node in the stack!');
   });
