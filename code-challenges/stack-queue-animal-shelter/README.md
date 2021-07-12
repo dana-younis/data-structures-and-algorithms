@@ -8,5 +8,5 @@ Create a queue to keep track of which animals have been in a shelter the longest
 My strategy was to produce a more detailed picture than I had previously. It was useful for me to 'define' the Animal constructor and its offspring, as well as their attributes.I'll utilize a queue so that I may send the animals via the linked list in the following order: first in, first out.
 
 ## Solution
-https://github.com/dana-younis/data-structures-and-algorithms/pull/32
+https://github.com/dana-younis/data-structures-and-algorithms/pull/34
 
