@@ -163,7 +163,6 @@ class BinaryTree {
     }
   }
   findMaxValue() {
-
     let current = this.root;
 
     const findMax = (node) => {
@@ -171,27 +170,22 @@ class BinaryTree {
         return;
       }
 
-      let actualMax = node.value;
-      let leftSideMax = findMax(node.left);
-      let rightSideMax = findMax(node.right);
-
-      if (leftSideMax > actualMax) {
-        actualMax = leftSideMax;
+      let middle = node.value;
+      let left = findMax(node.left);
+      let right = findMax(node.right);
+      if (right > middle) {
+        middle = right;
+      }
+      if (left > middle) {
+        middle = left;
       }
 
-      if (rightSideMax > actualMax) {
-        actualMax = rightSideMax;
-      }
-
-      return actualMax;
+      return middle;
     };
 
     return findMax(current);
   }
-
 }
-
-
 
 module.exports = {
   BinaryTree: BinaryTree,
