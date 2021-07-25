@@ -55,4 +55,33 @@ describe("Tests binary tree and binary tree search", () => {
 
     expect(postOrder).toEqual([5, 2, 9]);
   });
+  test('Finds the largest number in the tree', () => {
+
+    bTree.root = new binaryTree.Node(9);
+    bTree.root.left = new binaryTree.Node(5);
+    bTree.root.right = new binaryTree.Node(2);
+
+    const max = bTree.findMaxValue();
+
+    expect(max).toEqual(9);
+  });
+
+
+  test('Finds the largest number in the tree again', () => {
+
+    bTree.root = new binaryTree.Node(2);
+
+    bTree.root.left = new binaryTree.Node(1);
+    bTree.root.left.left = new binaryTree.Node(3);
+
+    bTree.root.right = new binaryTree.Node(5);
+    bTree.root.right = new binaryTree.Node(2342);
+
+    const max = bTree.findMaxValue();
+
+    expect(max).toEqual(2342);
+  });
+
+
 });
+

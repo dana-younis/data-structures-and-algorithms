@@ -162,7 +162,36 @@ class BinaryTree {
       }
     }
   }
+  findMaxValue() {
+
+    let current = this.root;
+
+    const findMax = (node) => {
+      if (node === null) {
+        return;
+      }
+
+      let actualMax = node.value;
+      let leftSideMax = findMax(node.left);
+      let rightSideMax = findMax(node.right);
+
+      if (leftSideMax > actualMax) {
+        actualMax = leftSideMax;
+      }
+
+      if (rightSideMax > actualMax) {
+        actualMax = rightSideMax;
+      }
+
+      return actualMax;
+    };
+
+    return findMax(current);
+  }
+
 }
+
+
 
 module.exports = {
   BinaryTree: BinaryTree,
