@@ -185,6 +185,41 @@ class BinaryTree {
 
     return findMax(current);
   }
+  breadthFirst() {
+    let traversal;
+    let flattenArray;
+    let array = [];
+    traversal = (current, number) => {
+      if (!current) {
+        return null;
+      }
+      if (!array[number]) {
+        array[number] = [current.value];
+      } else {
+        array[number].push(current.value);
+      }
+
+      traversal(current.left, number + 1);
+      traversal(current.right, number + 1);
+    };
+
+    traversal(this.root, 0);
+
+    flattenArray = (array, result = []) => {
+      for (let i = 0; i < array.length; i++) {
+        let value = array[i];
+        if (Array.isArray(value)) {
+          flattenArray(value, result);
+        } else {
+          result[result.length] = value;
+        }
+      }
+
+      return result;
+    };
+
+    return flattenArray(array);
+  }
 }
 
 module.exports = {
