@@ -5,6 +5,7 @@ class Node {
     this.value = value;
     this.left = left;
     this.right = right;
+    this.pointer = new Array(value);
   }
 }
 
@@ -221,9 +222,55 @@ class BinaryTree {
     return flattenArray(array);
   }
 }
+class Kary {
+  constructor(index) {
+    this.index = index;
+    this.root = null;
+  }
+}
+
+function fizzBuzzTree(kAryTree) {
+  let tree = new Kary(kAryTree.index);
+  tree.root = new Node(kAryTree.root.value, kAryTree.index);
+
+  let current = kAryTree.root;
+  let final = tree.root;
+
+  let Array = [];
+  let Array2 = [];
+
+  Array.unshift(current);
+  Array2.unshift(final);
+
+  while (Array.length) {
+    current = Array.pop();
+    final = Array2.pop();
+    if (current.value % 15 === 0) {
+      final.value = "FizzBuzz";
+    } else if (current.value % 5 === 0) {
+      final.value = "Buzz";
+    } else if (current.value % 3 === 0) {
+      final.value = "Fizz";
+    } else {
+      final.value = current.value.toString();
+    }
+
+    for (let i = 0; i < current.pointer.length; i += 1) {
+      if (current.pointer[i]) {
+        final.pointer[i] = new Node(i, kAryTree.index);
+        Array.unshift(current.pointer[i]);
+        Array2.unshift(final.pointer[i]);
+      }
+    }
+  }
+
+  return tree;
+}
 
 module.exports = {
   BinaryTree: BinaryTree,
   BinaryTreeSearch: BinaryTreeSearch,
   Node: Node,
+  tree: Kary,
+  fizzBuzzTree: fizzBuzzTree,
 };

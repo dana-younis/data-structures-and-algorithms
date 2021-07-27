@@ -1,7 +1,7 @@
 "use strict";
 
 const binaryTree = require("../trees");
-
+const fizzBuzzTree = require("../trees");
 describe("Tests binary tree and binary tree search", () => {
   const bTree = new binaryTree.BinaryTree();
 
@@ -55,8 +55,7 @@ describe("Tests binary tree and binary tree search", () => {
 
     expect(postOrder).toEqual([5, 2, 9]);
   });
-  test('Finds the largest number in the tree', () => {
-
+  test("Finds the largest number in the tree", () => {
     bTree.root = new binaryTree.Node(9);
     bTree.root.left = new binaryTree.Node(5);
     bTree.root.right = new binaryTree.Node(2);
@@ -66,9 +65,7 @@ describe("Tests binary tree and binary tree search", () => {
     expect(max).toEqual(9);
   });
 
-
-  test('Finds the largest number in the tree again', () => {
-
+  test("Finds the largest number in the tree again", () => {
     bTree.root = new binaryTree.Node(2);
 
     bTree.root.left = new binaryTree.Node(1);
@@ -81,7 +78,38 @@ describe("Tests binary tree and binary tree search", () => {
 
     expect(max).toEqual(2342);
   });
-
-
 });
+describe("K-Ary tree tests,", () => {
+  const tree = new fizzBuzzTree.tree(2);
 
+  tree.root = new fizzBuzzTree.Node(15, tree.k);
+
+  tree.root.pointer[0] = new fizzBuzzTree.Node(2, tree.k);
+  tree.root.pointer[1] = new fizzBuzzTree.Node(4, tree.k);
+  tree.root.pointer[2] = new fizzBuzzTree.Node(6, tree.k);
+
+  tree.root.pointer[0].pointer[0] = new fizzBuzzTree.Node(8, tree.k);
+  tree.root.pointer[0].pointer[1] = new fizzBuzzTree.Node(10, tree.k);
+  tree.root.pointer[1].pointer[0] = new fizzBuzzTree.Node(12, tree.k);
+
+  const fbTree = fizzBuzzTree.fizzBuzzTree(tree);
+
+  // === === k-ary tests start here === === //
+  test("If the value is divisible by 3, replace the value with “Fizz”", () => {
+    expect(fbTree.root.pointer[2].value).toEqual("Fizz");
+  });
+
+  test("If the value is divisible by 5, replace the value with “Buzz”", () => {
+    expect(fbTree.root.pointer[0].pointer[1].value).toEqual("Buzz");
+  });
+
+  test("If the value is divisible by 3 and 5, replace the value with “FizzBuzz”", () => {
+    // console.log(fbTree.root.value);
+    expect(fbTree.root.value).toEqual("FizzBuzz");
+  });
+
+  test("If the value is not divisible by 3 or 5, simply turn the number into a String.", () => {
+    // console.log(fbTree.root.pointer[1].value);
+    expect(fbTree.root.pointer[1].value).toEqual("4");
+  });
+});
