@@ -15,6 +15,8 @@ Space and time of O(1).
 See `hashmap-repeated-word/hashmap-repeated-word.js` for code.
 
 ## API
+![whiteboard](../image/31.jpg)
+
 
 <!-- Description of each method publicly available in each of your hashtable -->
 
