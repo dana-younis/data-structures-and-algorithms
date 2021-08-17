@@ -14,12 +14,9 @@ The hashmap with word strings as keys and antonyms of the key as values is the s
 Return: You are in charge of the data structure that contains the results. It doesn't have to exactly match the output below as long as the LEFT JOIN logic is achieved.
 
 
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-Big O(1)
 
 ## Solution
 <!-- Embedded whiteboard image -->
 
-![whiteboard](../image/33.jpg)
+![solution](../image/33.jpg)
