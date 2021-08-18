@@ -8,6 +8,7 @@ Find common values in 2 binary trees/Find all values found to be in 2 binary tre
 
 `Output [100,160,125,175,200,350,500]`
 
+![whiteboard](../image/31.jpg)
 ## Approach & Efficiency
 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
